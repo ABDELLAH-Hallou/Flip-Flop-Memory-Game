@@ -1,0 +1,41 @@
+body{
+    padding-top: 2rem;
+}
+.card-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1px;
+    padding: 20px;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+}
+.card{
+    width: 125px;
+    height:200px;
+    position: relative;
+    transition: left 300ms, top 300ms;
+}
+
+.card img{
+    position: absolute;
+    top: 0;  left: 0;
+    overflow: hidden;
+    backface-visibility: hidden;
+    transition: transform 500ms;
+    cursor: pointer;
+}
+
+.card .flip.back{
+    transform: perspective(2000px) rotateY(0deg);   
+}
+.card .flip.face{
+    transform: perspective(1000px) rotateY(-180deg);
+}
+.crd:hover .flip.back{
+    transform: perspective(1000px) rotateY(180deg);   
+}
+.crd:hover .flip.face{
+    transform: perspective(1000px) rotateY(0deg);
+}

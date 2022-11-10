@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+        <div class="flex row">
+        <div class="col-2">
+               <!-- Sidebar -->
+            <nav id="sidebarMenu" class="collapse d-lg-block sidebar collapse bg-white">
+                <div class="position-sticky">
+                  <div class="list-group list-group-flush mx-3 mt-4">
+                    <ul id="collapseExample1" class="collapse show list-group list-group-flush">
+                      <li class="list-group-item py-1">
+                        <button onclick="showCards()" type="button" id="show" class="btn btn-primary">Show cards</button>
+                      </li>
+                      <li class="list-group-item py-1">
+                        <button onclick="startGame()" type="button" id="start" class="btn btn-primary">Play</button>
+                      </li>
+                      <li class="list-group-item py-1">
+                        <button onclick="reset()" type="button" id="reset" class="btn btn-primary">Reset</button>
+                      </li>
+                      <li class="list-group-item py-1">
+                        <button type="button" id="hint" class="btn btn-primary" disabled>Hint</button>
+                      </li>
+                      <li class="list-group-item py-1">
+                        <label for="score" class="text-reset">Score :</label>
+                        <label id="score" class="text-reset">0</label>
+                      </li>
+                      <li class="list-group-item py-1">
+                        <label for="level" class="text-reset">Level :</label>
+                        <select name="level" id="level">
+                                <option value="easy" selected>Easy</option>
+                                <option value="meduim">Meduim</option>
+                                <option value="hard">Hard</option>
+                        </select>
+                      </li>
+                      <li class="list-group-item py-1">
+                        <label for="timer" class="text-reset">Timer :</label>
+                        <label id="timer" class="text-reset">00</label>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </nav>
+              <!-- Sidebar --> 
+        </div>
+    <div class=" col-10" id="container">
+        <div class="card-container" id="card-container">
+        </div>
+
+    </div>
+        </div>
+</body>
+<script src="./globalVar.js"></script>
+<script src="./script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+    crossorigin="anonymous"></script>
+
+</html>
